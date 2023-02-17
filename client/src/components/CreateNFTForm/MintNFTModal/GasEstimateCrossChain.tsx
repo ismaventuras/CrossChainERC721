@@ -1,4 +1,4 @@
-import { CHAINS, MOONBEAM_CHAINID } from "@/helpers/chains";
+import { MOONBEAM_CHAINID } from "@/helpers/chains";
 import { useEstimateGasCrossChain } from "@/hooks/useEstimateGasCrossChain";
 import { useNftFormContext } from "../context";
 import SpinnerIcon from "../../Icons/SpinnerIcon";
