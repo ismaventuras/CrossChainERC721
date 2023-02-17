@@ -7,12 +7,12 @@ import TransferTokenModal from "./TransferTokenModal";
 
 function TokenListItem({ item,chainId }: {item:any,chainId:number}) {
   const [isOpen, setIsOpen] = useState(false);
-
+  console.log(chainId)
   const handleClose = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <div key={item} className="px-4 py-3 bg-white rounded-md shadow-md">
+    <div  className="px-4 py-3 bg-white rounded-md shadow-md">
       <span className="px-3 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full dark:bg-blue-300 dark:text-blue-900">
         #{item && item.toNumber()}
       </span>
@@ -56,7 +56,7 @@ export default function TokensOfChain({ chainId }: { chainId: number }) {
       }
       setContracts(c);
     }
-  }, [balanceOf.data]);
+  }, [balanceOf.data,chainId]);
 
   const { data, isSuccess } = useContractReads({
     contracts: contracts,
